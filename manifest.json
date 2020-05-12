@@ -1,0 +1,45 @@
+{
+    "name": "deCONZ",
+    "id": "deconz",
+    "packaging_format": 1,
+    "description": {
+        "en": "A tool to configure, control, and monitor Zigbee networks with the ConBee usb drive and Phoscon app.",
+        "fr": "Un outil pour configurer, contrôler et superviser des réseaux Zigbee avec la clé ConBee et l'app Phoscon."
+    },
+    "version": "2.05.75~ynh1",
+    "url": "https://phoscon.de",
+    "license": "BSD-3-Clause",
+    "maintainer": {
+        "name": "tituspijean",
+        "email": "tituspijean@outlook.com"
+    },
+    "requirements": {
+        "yunohost": ">= 3.5"
+    },
+    "multi_instance": false,
+    "services": [
+        "nginx"
+    ],
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "type": "domain",
+                "ask": {
+                    "en": "Choose a domain name for deCONZ",
+                    "fr": "Choisissez un nom de domaine pour deCONZ"
+                },
+                "example": "example.com"
+            },
+            {
+                "name": "is_public",
+                "type": "boolean",
+                "ask": {
+                    "en": "Is it a public application?",
+                    "fr": "Est-ce une application publique ?"
+                },
+                "default": false
+            }
+        ]
+    }
+}
